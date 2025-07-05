@@ -20,11 +20,15 @@ from mistralai import Mistral
 
 load_dotenv()
 
+def read_text_file(file_path):
+    with open(file_path, "r", encoding="utf-8") as f:
+        return f.read()
+
 # ---------------------------------------------------------------------------
 # Transcription audio (Whisper via Groq)
 # ---------------------------------------------------------------------------
 def speech_to_text(audio_path: str, language: str = "fr") -> str:
-    client = Groq(api_key=os.getenv["GROQ_API_KEY"])
+    client = Groq(api_key=os.getenv("GROQ_API_KEY"))
     with open(audio_path, "rb") as file:
         transcription = client.audio.transcriptions.create(
             file=file,
@@ -65,18 +69,32 @@ def classify_emotion(text: str) -> Dict[str, float]:
 # ---------------------------------------------------------------------------
 # Génération d'image (Clipdrop API - Stable Diffusion)
 # ---------------------------------------------------------------------------
-def generate_image(prompt: str) -> str:
+def generate_image(prompt):
     api_key = os.getenv("CLIPDROP_API_KEY")
     url = "https://clipdrop-api.co/text-to-image/v1"
+    if not api_key:
+        raise ValueError("La clé API CLIPDROP_API_KEY est manquante dans les variables d'environnement.")
     headers = {
         "x-api-key": api_key,
         "Content-Type": "application/json"
     }
-    payload = {"prompt": prompt, "style": "dream"}
+    prompt = read_text_file("synthetiseur_reve/prompt.txt")
+    payload = {
+        "prompt": prompt,
+        "negative_prompt": "flou, basse résolution, artefacts, texte, logo, watermark, mal dessiné, pixelisé", 
+        "style": "dream",
+        "width": 512,
+        "height": 512,
+        "num_inference_steps": 50,
+        "guidance": 7.5
+        }
     response = requests.post(url, headers=headers, json=payload)
-    response.raise_for_status()
+    if response.status_code != 200:
+        print("Erreur lors de la génération d'image:", response.status_code, response.text)
+        response.raise_for_status()
+
     data = response.json()
-    return data["image_url"]
+    return data.get("url")
 
 # ---------------------------------------------------------------------------
 # Persistence locale (SQLite3)
