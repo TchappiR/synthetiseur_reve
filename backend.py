@@ -24,7 +24,7 @@ load_dotenv()
 # Transcription audio (Whisper via Groq)
 # ---------------------------------------------------------------------------
 def speech_to_text(audio_path: str, language: str = "fr") -> str:
-    client = Groq(api_key=os.environ["GROQ_API_KEY"])
+    client = Groq(api_key=os.getenv["GROQ_API_KEY"])
     with open(audio_path, "rb") as file:
         transcription = client.audio.transcriptions.create(
             file=file,
@@ -47,7 +47,8 @@ def softmax(preds: Dict[str, float]) -> Dict[str, float]:
 
 def classify_emotion(text: str) -> Dict[str, float]:
     client = Mistral(api_key=os.environ["MISTRAL_API_KEY"])
-    context = "Tu es un assistant qui détecte les émotions exprimées dans un rêve. Ton résultat est un dictionnaire JSON: { 'heureux': float, 'stressant': float, 'neutre': float }"
+    context = "Tu es un assistant qui détecte les émotions exprimées dans un rêve.\
+        Ton résultat est un dictionnaire JSON: { 'heureux': float, 'stressant': float, 'neutre': float }"
 
     response = client.chat.complete(
         model="mistral-large-latest",
