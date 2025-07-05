@@ -1,0 +1,41 @@
+[
+  {
+    "timestamp": "2025-07-05T19:24:19.868563",
+    "transcription": " Aujourd'hui, je sais pas, j'ai rêvé que je me marie avec ma copine. Nous étions au Barmas, au bord d'une plage, il y avait quelques de nos proches, nous étions habillés pieds nus. Il nous en train de faire une célébration du mariage par la mère qui lui est habillée en short avriant avec un chapeau en paillis Il y avait quelques invités qui étaient présents et assis, des photographes un peu de partout qui nous filmaient après un moment où on dit embrasser la Marie",
+    "emotions": {
+      "heureux": 0.9962711578338441,
+      "stressant": 1.6639422784092476e-05,
+      "neutre": 0.0003342117407104195,
+      "mystérieux": 0.002469509301030554,
+      "nostalgique": 0.0009084817016307995
+    },
+    "dominant_emotion": "heureux",
+    "image_prompt": "\"Create a dreamy, romantic beach wedding scene in the style of impressionism, with a focus on soft, pastel colors and visible brushstrokes. Set the composition on a secluded beach at sunset, with the warm, golden light of the setting sun casting long shadows and reflecting off the gentle waves.\n\nIn the center, a barefoot couple is standing, dressed in simple yet elegant white attire, embracing in a kiss, surrounded by a small group of close-knit guests seated on driftwood benches. The guests are casually dressed, with the mother of the bride in shorts and a wide-brimmed straw hat, officiating the ceremony.\n\nScattered around the scene, capturing the moment, are a few photographers, blending into the background. The atmosphere is intimate and serene, with a slight breeze rustling the palm trees and the sound of waves gently lapping against the shore. Use a low angle shot to capture the expansive sky and the couples silhouette against the sunset.\""
+  },
+  {
+    "timestamp": "2025-07-05T20:25:41.258635",
+    "transcription": " Aujourd'hui, je sais pas, j'ai rêvé que je me marie avec ma copine. Nous étions au Barmas, au bord d'une plage, il y avait quelques de nos proches, nous étions habillés pieds nus. Il nous en train de faire une célébration du mariage par la mère qui lui est habillée en short avriant avec un chapeau en paillis Il y avait quelques invités qui étaient présents et assis, des photographes un peu de partout qui nous filmaient après un moment où on dit embrasser la Marie",
+    "emotions": {
+      "heureux": 0.9905218317933965,
+      "stressant": 1.654339926081935e-05,
+      "neutre": 0.0003322830566882226,
+      "mystérieux": 0.00245525814659343,
+      "nostalgique": 0.006674083604060956
+    },
+    "dominant_emotion": "heureux",
+    "image_prompt": "\"Create a dreamy, impressionistic scene of a beach wedding at Barmas. The composition should focus on the bride and groom, barefoot and casually dressed, standing by the shore. The bride's mother, dressed in a vibrant apron and straw hat, officiates the ceremony. Surround them with a small gathering of close family and friends, seated casually on the sand. Include photojournalists scattered around, capturing the moment. Use a soft, pastel color palette with a warm, late afternoon lighting to enhance the romantic atmosphere. Depict the moment just before the couple shares their first kiss as newlyweds, with a sense of joy and anticipation palpable in the air.\""
+  },
+  {
+    "timestamp": "2025-07-05T20:51:51.972911",
+    "transcription": " Aujourd'hui, je sais pas, j'ai rêvé que je me marie avec ma copine. Nous étions au Barmas, au bord d'une plage, il y avait quelques de nos proches, nous étions habillés pieds nus. Il nous en train de faire une célébration du mariage par la mère qui lui est habillée en short avriant avec un chapeau en paillis Il y avait quelques invités qui étaient présents et assis, des photographes un peu de partout qui nous filmaient après un moment où on dit embrasser la Marie",
+    "emotions": {
+      "heureux": 0.9962711578338441,
+      "stressant": 1.6639422784092476e-05,
+      "neutre": 0.0003342117407104195,
+      "mystérieux": 0.002469509301030554,
+      "nostalgique": 0.0009084817016307995
+    },
+    "dominant_emotion": "heureux",
+    "image_prompt": "A serene beach wedding at sunset, captured in a romantic, impressionistic style. The scene is set on the shores of Barmas, with a soft, warm glow illuminating the ceremony. The bride and groom stand barefoot in the sand, dressed in elegant yet simple attire, exchanging vows before a small gathering of loved ones. The officiant, a woman in a breezy apricot short dress and a straw hat, adds a touch of casual charm to the event. Guests are seated on rustic wooden chairs, while photographers discreetly capture the moment from various angles. The composition is intimate, focusing on the couple's embrace and the tender atmosphere of the celebration."
+  }
+]
