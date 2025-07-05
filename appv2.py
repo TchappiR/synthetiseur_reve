@@ -296,11 +296,13 @@ def display_dream_result(result: dict):
         
         # Bouton de téléchargement
         st.download_button(
-            label="💾 Télécharger l'image",
-            data=result["image_data"],
-            file_name=f"dream_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png",
-            mime="image/png"
+        label="💾 Télécharger l'image",
+        data=result["image_data"],
+        file_name=f"dream_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png",
+        mime="image/png",
+        key=f"download-button-{uuid.uuid4()}", 
         )
+
     else:
         st.warning("❌ Impossible de générer l'image")
     
