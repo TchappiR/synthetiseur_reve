@@ -1,0 +1,6 @@
+requests
+dotenv
+groq
+mistralai
+streamlit
+pyclipdrop
